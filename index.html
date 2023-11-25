@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark theme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: hsl(213, 83%, 7%); --textColor : white; 
+            --headingColor: rgb(238, 18, 110); --buttonBackNormal:rgb(209, 6, 91);
+        }
+        body {
+            max-width: 1440px; width: 100%;
+            margin: 0 auto; padding-top: 20px;
+            display: flex; justify-content: center;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        * {
+            margin: 0;
+        }
+        .container {
+            width: 50%;
+        }
+        .Title {
+            display: flex; justify-content: space-between;
+            padding-bottom: 50px; letter-spacing: 1px;
+        }
+        .Title-heading {
+            font-size: 35px; font-weight: 500;
+        }
+        .theme-btn {
+            width: 100px; height: 30px;
+            margin-right: 20px; border: none; font-weight: 700; color: var(--textColor);
+            border-radius: 7px; background-color: var(--buttonBackNormal);
+        }
+        .card-heading {
+            padding-bottom: 5px; font-weight: 900;
+            letter-spacing: 1px; color: var(--headingColor);
+        }
+        .card-date {
+            font-size: 12px; font-style: italic;
+            padding-bottom: 10px;
+        }
+        .contant-text {
+            font-size: 14px; font-weight: 500;
+            padding-bottom: 35px;
+        }
+        .themeToggle {
+            background-color: var(--background); color: var(--textColor);
+        }
+        .btn-theme-toggle {
+            color: black; background-color: var(--headingColor);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Title">
+            <h1 class="Title-heading">Overreacted</h1>
+            <button class="theme-btn">Dark mode</button>
+        </div>
+        <div class="content">
+            <div class="contant-card">
+                <h3 class="card-heading">The WET codbase</h3>
+                <p class="card-date">October 4th,2020 11min read</p>
+                <p class="contant-text">I'm baby ramps kombucha gluten-free ennui swag tattoed street art.Marfa biodiesel letter
+                    press blue bottle subway tilt,pop-up
+                    pok pok of.
+                </p>
+            </div>
+            <div class="contant-card">
+                <h3 class="card-heading">Goodby,Clean Code</h3>
+                <p class="card-date">November 22nd,2019 5min read</p>
+                <p class="contant-text">Biodiesel artisan seitan plaid sriracha copper mug venmo shabby chic.Kickstarter raclette
+                    kombucha,yr post-ironic jianbing
+                    try hard flexitarian vaporware normcore.
+                </p>
+            </div>
+            <div class="contant-card">
+                <h3 class="card-heading">My Decade In Review</h3>
+                <p class="card-date">August 11th,2018 5min read</p>
+                <p class="contant-text">Direct trade shabby chic four dolar toast,tilde actually try-hard bicycle rights aesthetic
+                    forage.Meditation keytar aymmetrical
+                    tacos artisan truffaut.Pabst jean shorts roof party scenester.
+                </p>
+            </div>
+            <div class="contant-card">
+                <h3 class="card-heading">What Are The React Team Principles</h3>
+                <p class="card-date">June 4th 2015 5min read</p>
+                <p class="contant-text">Selvage street art hammock affogato VHS.Mustache shaman literally wayfarers schlitz.Direct
+                    trade four loko narwhal VHS pop-up,
+                    chartreuse trust fund typewriter street art swag thunder cats art party.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let body = document.body;
+        let theme_btn = document.querySelector(".theme-btn");
+            theme_btn.addEventListener('click', () => {
+                body.classList.toggle('themeToggle')
+                theme_btn.classList.toggle('btn-theme-toggle')
+                if (theme_btn.innerHTML == "Dark mode") {
+                    theme_btn.innerHTML = "Light mode";
+                } else {
+                    theme_btn.innerHTML = "Dark mode";
+                }
+                });
+    </script>
+</body>
+</html>
